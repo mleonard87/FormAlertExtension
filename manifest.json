@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "Secure Forms",
+  "description": "Notifies the user when a form containing a password has been loaded using HTTP rather than HTTPS.",
+  "version": "0.0.1",
+
+  "options_page": "options.html",
+
+  "background": {
+    "scripts": ["js/sfe_background.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["js/jquery-1.10.2.min.js", "js/sfe.js"],
+      "css": ["css/sfe.css"]
+    }
+  ]
+}

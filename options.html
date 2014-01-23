@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Secure Forms Extension - Options</title>
+  <link href="css/sfe_options.css" type="text/css" rel="stylesheet" media="screen" />
+  <link href="css/colpick.css" type="text/css" rel="stylesheet" media="screen" />
+  <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+  <script src="js/sfe_background.js" type="text/javascript"></script>
+  <script src="js/sfe_options.js" type="text/javascript"></script>
+  <script src="js/colpick.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <header>
+      <h1>Secure Forms Extension - Options</h1>
+    </header>
+    
+    <section id="content">
+
+      <h2>Display Options</h2>
+
+      <p class="helptext">
+        The following settings allow you to turn on and off the feature that alert you to an form that has been loaded over an insecure connection.
+      </p>
+
+      <div class="option">
+        <div class="control">
+          <label for="option-display-callout">Display callout</label>
+          <input id="option-display-callout" type="checkbox">
+        </div>
+        <p class="helptext">Checking this option will display a information box above each password field when you click on the field.</p>  
+      </div>
+
+      <!--div class="option">
+        <div class="control">
+          <label for="option-display-icon">Display icon</label>
+          <input id="option-display-icon" type="checkbox">
+        </div>
+        <p class="helptext">Checking this option will display an icon within each password field to the right.</p>  
+      </div-->
+
+      <h2>Style Options</h2>
+
+      <p class="helptext">
+        The following settings control how each password field will be displayed on the screen when a form is loaded over and insecure connection.
+      </p>
+
+      <div class="option">
+        <div class="control">
+          <label for="option-border-color">Border Color</label>
+          <div id="option-border-color" class="color-box"></div>
+        </div>
+        <p class="helptext">Checking this option will display an icon within each password field to the right.</p>  
+      </div>
+
+      <div class="option">
+        <div class="control">
+          <label for="option-border-width">Border Thickness</label>
+          <input id="option-border-width" type="number" min="1" max="8">
+        </div>
+        <p class="helptext">Checking this option will display an icon within each password field to the right.</p>  
+      </div>
+
+      <div class="option">
+        <div class="control">
+          <label for="option-border-style">Border Style</label>
+          <select id="option-border-style" name="border_style">
+            <option value="solid">Solid</option>
+            <option value="dashed">Dashed</option>
+            <option value="dotted">Dotted</option>
+            <option value="double">Double</option>
+          </select>
+        </div>
+        <p class="helptext">Checking this option will display an icon within each password field to the right.</p>  
+      </div>
+
+      <a id="restore-defaults" href="#" title="Click here to restore the default settings.">Restore Defaults</a>
+
+      <h2>About</h2>
+
+      <h3>Security</h3>
+
+      <p>
+        This browser extension helps notify you when a form on a webpage containing password fields has been loaded using an insecure connection.
+      </p>
+      <p>
+        When forms are loaded using HTTP rather than HTTPS all the data you submit introduces the risk of being intercepted by a malicious attacker that can then steal and use your information.
+      </p>
+      <p>
+        It is very likely that you use the same email and password combination on many sites, if the attacker intercepts and steals your password they may be able to gain access to your email or other personal accounts.
+      </p>
+
+      <h3>Recommended Action</h3>
+      <p>
+        This extension does not stop you from submitting the form but it does allow you to make an informed decision about the password you are submitting.
+      </p>
+      <p>
+        It is therefore recommended that you use a password that you do not use on any other web site.
+      </p>
+      <p>
+        This way, if an attacker does intercept and steal your password then you only have the risk of this one account being violated.
+      </p>
+
+      <h3>Further Reading</h3>
+      <p>
+        You can read more about the risks but following these links:
+      </p>
+      <ul class="external-links">
+        <li><a href="http://www.stealmylogin.com/">Steal My Login - Exposing the dangers of insecure login forms</a></li>
+        <li><a href="http://www.troyhunt.com/2013/05/your-login-form-posts-to-https-but-you.html">Troy Hunt - Your login form posts to HTTPS, but you blew it when you loaded it over HTTP</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/HTTP_Secure">Wikipedia - HTTP Secure</a></li>
+      </ul>
+
+    </section>
+
+    <footer>
+      Created by Mike Leonard - <a href="http://www.mikeleonard.co.uk">www.mikeleonard.co.uk</a> - <a href="http://twitter.com/mleonard87">@mleonard87</a> - <a href="mailto:mike.r.leonard@gmail.com">mike.r.leonard@gmail.com</a>
+    </footer>
+     
+  </div>
+</body>
+</html>

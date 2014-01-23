@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+ font-family: Helvetica, Arial, sans-serif;
+ background-color: #eee;
+ font-size: 0.9em;
+}
+
+h2 {
+  width: 100%;
+  border-bottom: 1px solid #bbb;
+  margin-bottom: 0.8em;
+}
+
+h3 {
+  margin-bottom: 0.6em;
+}
+
+#wrapper { 
+ margin: 0 auto;
+ width: 60%;
+
+}
+
+header, #content, footer {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+header {
+  margin-top: 2em;
+  color: #fff;
+  border: 1px solid #003f7e;
+  background: #006dda;
+  padding: 0.8em;
+}
+
+#content { 
+ border: 1px solid #ccc;
+ background: #f6f6f6;
+ margin: 0.8em 0 0.8em 0;
+ padding: 2em;
+}
+
+footer { 
+ border: 1px solid #999;
+ background: #ccc;
+ text-align: center;
+ font-size: 0.9em;
+ padding: 0.4em;
+ margin-bottom: 2em;
+}
+
+.option {
+  margin: 1.8em 0 1.8em 0;
+}
+
+.option .control {
+  margin-bottom: 0.6em;
+}
+
+.option label {
+  font-weight: bold;
+  width: 10em;
+  display: inline-block;
+}
+
+.helptext {
+  color: #4c4c4c;
+}
+
+.option .helptext {
+  font-size: 0.9em;
+  padding-left: 1.2em;
+}
+
+p:not([class="helptext"]) {
+  margin-bottom: 0.5em;
+}
+
+.color-box {
+  width: 1.4em;
+  height: 1.4em;
+  border: 1px solid #000;
+  display: inline-block;
+}
+
+#restore-defaults {
+  margin-bottom: 4em;
+  display: block;
+}
+
+a, a:visited, a:active {
+  color: #00f;
+}
+
+a:hover {
+  color: #000;
+}
+
+footer a, footer a:visited, footer a:active {
+  color: #000;
+}
+
+footer a:hover {
+  color: #cc5200;
+}
+
+.external-links {
+  list-style: none;
+  padding-left: 1.2em;
+}
+
+.external-links li {
+  padding: 0.1em;
+}
