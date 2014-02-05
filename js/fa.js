@@ -45,11 +45,32 @@ function showCallout() {
     $('body').append(callout);
   }
 
+  var callout_padding = Number(callout.css('padding').replace('px', ''));
+  var callout_border = Number(callout.css('border-width').replace('px', ''));
   var callout_width = callout.width();
-  var callout_computed_height = callout.height() + (Number(callout.css('padding').replace('px', '')) * 2);
+  var callout_computed_height = callout.height() + (callout_padding * 2) + (callout_border * 2);
 
+  // Horizontal Positioning
   var x = $(this).offset().left + ($(this).width() / 2) - (callout_width / 2);
+  var overshoot = (x + callout_width + (callout_padding * 2) + (callout_border * 2)) - $(window).width();
+
+  // Move to the callout left if the callout is going off the page to the right.
+  if (overshoot > 0) {
+    x = x - overshoot;
+  }
+
+  // Move to the callout right if the callout is going off the page to the left.
+  if (x < 0) {
+    x = 0;
+  }
+
+  // Vertical Positioning
   var y = $(this).offset().top - callout_computed_height - 5;
+
+  // If the callout is off the screen at the top move it under the password field instead.
+  if (y < 0) {
+    y = $(this).offset().top + $(this).height() + 5;
+  }
 
   callout.css('left', x + 'px');
   callout.css('top', y + 'px');
