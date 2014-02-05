@@ -1,9 +1,9 @@
-SecureFormExtension
+FormAlert Extension
 ===================
 
 Google Chrome extension that notifies the user when a form containing a password has been loaded using HTTP rather than HTTPS.
 
-Find the extension on the Google Chrome Web Store - [Secure Forms Extension](https://chrome.google.com/webstore/detail/secure-forms/kkldikhlioilljdpokfodabmeophmeci?hl=en-US)
+Find the extension on the Google Chrome Web Store - [FormAlert Extension](https://chrome.google.com/webstore/detail/secure-forms/kkldikhlioilljdpokfodabmeophmeci?hl=en-US)
 
 About
 =====

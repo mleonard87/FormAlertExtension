@@ -63,6 +63,5 @@ function hideCallout() {
 $(document).ready(function(){
   chrome.runtime.sendMessage({greeting: 'get_vars'}, function(response) {
     processForms(response);
-    console.log(response);
   });
 });

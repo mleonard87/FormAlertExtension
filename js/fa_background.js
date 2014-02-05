@@ -39,11 +39,11 @@ chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     if (request.greeting == 'get_vars')
       sendResponse({
-        'display_callout': parseBoolean(localStorage['display_callout']),
-        'display_icon': parseBoolean(localStorage['display_icon']),
-        'border_color': localStorage['border_color'],
-        'border_width': localStorage['border_width'],
-        'border_style': localStorage['border_style']
+        'display_callout': display_callout,
+        'display_icon': display_icon,
+        'border_color': border_color,
+        'border_width': border_width,
+        'border_style': border_style
       });
   }
 );
