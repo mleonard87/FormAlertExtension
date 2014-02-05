@@ -57,4 +57,6 @@ $(document).ready(function() {
   bindChangeEvents();
 
   $('#restore-defaults').bind('click', restoreDefaults);
+
+  previewOptions();
 });

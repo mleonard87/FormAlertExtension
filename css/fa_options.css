@@ -89,8 +89,8 @@ p:not([class="helptext"]) {
 }
 
 #restore-defaults {
-  margin-bottom: 4em;
-  display: block;
+  margin-bottom: 2em;
+  display: inline-block;
 }
 
 a, a:visited, a:active {
@@ -116,4 +116,30 @@ footer a:hover {
 
 .external-links li {
   padding: 0.1em;
+}
+
+#demo-form {
+  border: 1px dashed black;
+  margin-bottom: 4em;
+  padding: 1em;
+  background-color: #ebebeb;
+  width: 20em;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#demo-form p {
+  text-align: middle;
+}
+
+#demo-form input {
+  padding: 2px;
+  font-size: 1.1em;
+}
+
+#demo-form label {
+  font-size: 1.1em;
+  font-weight: bold;
+  width: 5.5em;
+  display: inline-block;
 }

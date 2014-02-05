@@ -17,7 +17,7 @@ function processForms(user_options) {
 
   var is_page_secure = (window.location.protocol === 'https:') ? true : false;
 
-  if (!is_page_secure) {
+  if (!is_page_secure || is_options_page) {
 
     $('form').each(function() {
 
@@ -27,6 +27,8 @@ function processForms(user_options) {
         if (user_options.display_callout) {
           $(this).bind('focus', showCallout);
           $(this).bind('blur', hideCallout);
+        } else if (is_options_page) {
+          $(this).unbind();
         }
 
       });
@@ -61,7 +63,9 @@ function hideCallout() {
 }
 
 $(document).ready(function(){
-  chrome.runtime.sendMessage({greeting: 'get_vars'}, function(response) {
-    processForms(response);
-  });
+  if (window['is_options_page'] === undefined) {
+    chrome.runtime.sendMessage({greeting: 'get_vars'}, function(response) {
+      processForms(response);
+    });
+  }
 });

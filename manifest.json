@@ -3,7 +3,7 @@
 
   "name": "FormAlert",
   "description": "Notifies the user when a form containing a password has been loaded using HTTP rather than HTTPS.",
-  "version": "0.0.4",
+  "version": "0.1.0",
 
   "options_page": "options.html",
 

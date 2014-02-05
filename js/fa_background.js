@@ -15,6 +15,17 @@ var border_style = (localStorage['border_style'] != undefined) ? localStorage['b
 function saveOption(option_name, option_value) {
   window[option_name] = option_value;
   localStorage[option_name] = option_value;
+  previewOptions();
+}
+
+function previewOptions() {
+  processForms({
+    'display_callout': display_callout,
+    'display_icon': display_icon,
+    'border_color': border_color,
+    'border_width': border_width,
+    'border_style': border_style
+  });
 }
 
 function parseBoolean(booleanStr) {
@@ -35,15 +46,17 @@ function booleanToChecked(boolean) {
   }
 }
 
-chrome.runtime.onMessage.addListener(
-  function(request, sender, sendResponse) {
-    if (request.greeting == 'get_vars')
-      sendResponse({
-        'display_callout': display_callout,
-        'display_icon': display_icon,
-        'border_color': border_color,
-        'border_width': border_width,
-        'border_style': border_style
-      });
-  }
-);
+if (window['is_options_page'] === undefined) {
+  chrome.runtime.onMessage.addListener(
+    function(request, sender, sendResponse) {
+      if (request.greeting == 'get_vars')
+        sendResponse({
+          'display_callout': display_callout,
+          'display_icon': display_icon,
+          'border_color': border_color,
+          'border_width': border_width,
+          'border_style': border_style
+        });
+    }
+  );
+}
