@@ -1,7 +1,4 @@
-"use strict";
 
-var callout_width = 350;
-var callout_height = 100;
 
 var callout_template = $('<div id="sp-callout" class="sp-callout">' + 
   'This webpage has not been loaded with a secure connection. This means that your password could be intercepted by others.' +
@@ -43,18 +40,19 @@ function addWarningStyle(elem, user_options) {
 }
 
 function showCallout() {
-
   if (!callout) {
     callout = $(callout_template);
     $('body').append(callout);
   }
 
+  var callout_width = callout.width();
+  var callout_computed_height = callout.height() + (Number(callout.css('padding').replace('px', '')) * 2);
+
   var x = $(this).offset().left + ($(this).width() / 2) - (callout_width / 2);
-  var y = $(this).offset().top - callout_height - 5;
+  var y = $(this).offset().top - callout_computed_height - 5;
 
   callout.css('left', x + 'px');
   callout.css('top', y + 'px');
-  
 }
 
 function hideCallout() {

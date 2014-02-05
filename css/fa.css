@@ -1,5 +1,4 @@
 div.sp-callout {
-  height: 100px;
   width: 350px;
   position: absolute;
   background-color: #ddd;
@@ -8,6 +7,5 @@ div.sp-callout {
   padding: 15px;
   z-index: 9999;
   border-radius: 5px;
-  /*opacity: 0.8;*/
-  /*font-size: 1.1em;*/
+  font-size: 1.0em;
 }
